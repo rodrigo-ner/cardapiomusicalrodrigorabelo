@@ -154,30 +154,6 @@ display: block;
 <!--testes aqui-->
 
 
- <script>
-    function pedirMusica(nome, estilo) {
-      fetch("https://api.baserow.io/api/database/rows/table/246588/?user_field_names=true", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "Token 6RLWLeIvM0VNxpJuPh6dO3mQmJyOwCQm"
-        },
-        body: JSON.stringify({
-          "Música": nome,
-          "Estilo": estilo,
-          "Data": new Date().toISOString()
-        })
-      })
-      .then(res => {
-        if (!res.ok) throw new Error("Erro na API");
-        alert("Pedido enviado com sucesso!");
-      })
-      .catch(err => {
-        alert("Erro ao enviar pedido.");
-        console.error(err);
-      });
-    }
-  </script>
 
 </head>
 <body>
