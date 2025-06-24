@@ -141,7 +141,7 @@ display: block;
   font-size: 3em;
   font-weight: 900;
   text-align: center;
-  background: linear-gradient(90deg, #8a221b, #ff00cc);
+  background: linear-gradient(90deg, #ffffff, #ffffff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
@@ -149,6 +149,64 @@ display: block;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
 }
+
+.placa-brilhante {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border: 5px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 20px 5px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.titulo-animado {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: #222;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+  animation: flutuar 3s ease-in-out infinite;
+  z-index: 1;
+  position: relative;
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Efeito de brilho passando por cima */
+.brilho-efeito::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+  transform: rotate(25deg);
+  animation: brilho 4s linear infinite;
+  z-index: 0;
+}
+
+@keyframes brilho {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
+
+
   </style>
 
 <!--testes aqui-->
@@ -159,7 +217,15 @@ display: block;
 <body>
 
   <header>
-    <h1 class="titulo-destaque">Cardápio Musical <p> Rodrigo Rabêlo</p></h1>
+    
+<div class="placa-brilhante">
+  <h1 class="titulo-animado">Cardápio Musical</h1>
+  <div class="brilho-efeito"></div>
+</div>
+<p class="titulo-destaque">Rodrigo Rabêlo
+  
+</p>
+
       <img src="fotoprincipal.png" alt="Rodrigo Rabêlo" style="width: 500px; height: 500px;">
     <p class="titulo-destaque">Escolha sua música favorita e apoie o artista!</p>
   </header>
