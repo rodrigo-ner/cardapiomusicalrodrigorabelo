@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repertório - Rodrigo Rabêlo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .music-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .music-item {
+      background: #1e1e1e;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .music-item button {
+      background: #0f0;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .tip-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .pix-key {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      word-break: break-word;
+    }
+
+    .copy-btn {
+      background: #00c3ff;
+      color: #000;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #copy-msg {
+      color: #0f0;
+      margin-top: 8px;
+      display: none;
+    }
+
+    .tip-section img {
+      max-width: 200px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      font-size: 0.9em;
+      color: #888;
+    }
+    .album-button {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.album-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+.album-button span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 6px 0;
+  background: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  font-size: 1em;
+}
+.album-button:hover {
+  transform: scale(1.05);
+}
+
+.legenda {
+font-size: 20px;
+font-weight: bold;
+color: white;
+display: block;
+
+}
+.titulo-destaque {
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  background: linear-gradient(90deg, #8a221b, #ff00cc);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  margin: 30px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+  </style>
+  <form action="https://formsubmit.co/rodyrabelo15@gmail.com" method="POST" id="pedidoForm">
+  <input type="hidden" name="musica" id="campoMusica">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://sua-pagina-de-obrigado.com">
+</form>
+
+</head>
+<body>
+
+  <header>
+    <h1 class="titulo-destaque">Cardápio Musical <p> Rodrigo Rabêlo</p></h1>
+      <img src="fotoprincipal.png" alt="Rodrigo Rabêlo" style="width: 500px; height: 500px;">
+    <p class="titulo-destaque">Escolha sua música favorita e apoie o artista!</p>
+  </header>
+
+  <div class="container">
+    <a href="mpb.html" class="album-button">
+  <img src="album-mpb.png" alt="Repertório MPB" />
+  <span class="legenda">MPB</span>
+</a>
+
+    <a href="poprock.html" class="album-button">
+  <img src="album-poprock.png" alt="Repertório Pop Rock" />
+  <span class="legenda">Pop Rock</span>
+</a>
+
+    <a href="internacionais.html" class="album-button">
+  <img src="internacionaisfoto.png" alt="Repertório Internacionais" />
+  <span class="legenda">Internacionais</span>
+</a>
+
+    <a href="autorais.html" class="album-button">
+  <img src="album-ntn.jpg" alt="Repertório NTN & Rodrigo Rabêlo" />
+  <span class="legenda">Repertório Autoral</span>
+</a>
+
+    <div class="tip-section">
+      <h2>Curtiu o som? Deixe uma gorjeta!</h2>
+      <p class="pix-key" id="pixKey">rodrigorabelontn@gmail.com</p>
+      <p id="copy-msg">✅ Chave Pix copiada para a área de transferência!</p>
+      <img src="qrCodePIX.jpg" alt="QR Code Pix">
+      <p button class="copy-btn" onclick="copiarPix()">Copiar chave Pix</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Rodrigo Rabêlo - Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function copiarPix() {
+      const chave = document.getElementById("pixKey").innerText;
+      navigator.clipboard.writeText(chave).then(() => {
+        const msg = document.getElementById("copy-msg");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 3000);
+      }).catch(err => {
+        alert("Erro ao copiar a chave Pix. Copie manualmente.");
+      });
+    }
+  </script>
+
+</body>
+</html>

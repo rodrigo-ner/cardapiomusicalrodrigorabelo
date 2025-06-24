@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repertório Pop Rock - Rodrigo Rabêlo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .music-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .music-item {
+      background: #1e1e1e;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .music-item button {
+      background: #00c3ff;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Repertório Pop Rock - Rodrigo Rabêlo</h1>
+    <p>Escolha sua música preferida de Pop Rock e peça ao vivo!</p>
+  </header>
+
+  <div class="container">
+    <ul class="music-list">
+      <li class="music-item">
+        <span>O Rappa - Minha Alma</span>
+        <button onclick="pedirMusica('Minha Alma')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Charlie Brown Jr. - Céu Azul</span>
+        <button onclick="pedirMusica('Céu Azul')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>NXZero - Razões e Emoções</span>
+        <button onclick="pedirMusica('Razões e emoções')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Jota Quest - O Sol</span>
+        <button onclick="pedirMusica('O Sol J Quest')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Skank - Vamos Fugir</span>
+        <button onclick="pedirMusica('Vamos Fugir')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>O Rappa - Pescador de ilusões</span>
+        <button onclick="pedirMusica('Pescador de ilusões')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Capital Inicial - A Sua Maneira</span>
+        <button onclick="pedirMusica('A Sua Maneira')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Charlie Brown Jr. - Zoio de Lula</span>
+        <button onclick="pedirMusica('Zoio de Lula')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Cazuza - Exagerado</span>
+        <button onclick="pedirMusica('Exagerado')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>Los Hermanos - Anna Julia</span>
+        <button onclick="pedirMusica('Anna Julia')">Pedir Música</button>
+      </li>
+                  <li class="music-item">
+        <span>Los Hermanos - Último Romance</span>
+        <button onclick="pedirMusica('Último Romance')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+      <span>Los Hermanos - Sentimental</span>
+        <button onclick="pedirMusica('Sentimental')">Pedir Música</button>
+      </li>
+                  <li class="music-item">
+        <span>Detonautas - O dia que não terminou</span>
+        <button onclick="pedirMusica('O dia que não terminou')">Pedir Música</button>
+      </li>
+                        <li class="music-item">
+        <span>Skank - Acima do Sol</span>
+        <button onclick="pedirMusica('Acima do Sol')">Pedir Música</button>
+      </li>
+                        <li class="music-item">
+        <span>Legião Urbana - Ainda é Cedo</span>
+        <button onclick="pedirMusica('Ainda é Cedo')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+              <span>Legião Urbana - Tempo Perdido</span>
+        <button onclick="pedirMusica('Tempo Perdido')">Pedir Música</button>
+      </li>
+                        <li class="music-item">
+        <span>Titãs - Televisão</span>
+        <button onclick="pedirMusica('Televisão')">Pedir Música</button>
+      </li>
+                        <li class="music-item">
+        <span>Ultraje A Rigor - Ciúmes</span>
+        <button onclick="pedirMusica('Ciúmes')">Pedir Música</button>
+      </li>
+                        <li class="music-item">
+        <span>Nenhum de Nós - O Astronauta de Mármore</span>
+        <button onclick="pedirMusica('O Astronauta de Mármore')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+      <span>Cássia Eller - Malandragem</span>
+        <button onclick="pedirMusica('Malandragem')">Pedir Música</button>
+      </li>
+      <!-- Adicione mais músicas MPB aqui -->
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Rodrigo Rabêlo - Repertório Pop Rock
+  </footer>
+
+  <script>
+    function pedirMusica(nome) {
+      // Você pode passar o nome da música como parâmetro para a próxima página via URL
+      const url = 'pedir.html?musica=' + encodeURIComponent(nome);
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>

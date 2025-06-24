@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Escolha o valor da gorjeta</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background: #222;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    .btn {
+      background-color: #00c3ff;
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #00a0cc;
+    }
+
+    .input-section {
+      margin-top: 20px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      font-size: 1em;
+      width: 120px;
+      text-align: center;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .confirm-btn {
+      margin-top: 20px;
+      background: #0f0;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Escolha o valor da sua gorjeta</h1>
+    <p>Obrigado por apoiar a música ao vivo!</p>
+  </header>
+
+  <div class="container">
+    <!-- Botão R$5 com estilo próprio, funcional com link -->
+    <button class="btn" onclick="pagarMercadoPago()">R$5</button>
+
+    <!-- Botões padrão -->
+    <button class="btn" onclick="enviarValor(valor=10)">R$10</button>
+    <button class="btn" onclick="enviarValor(valor=20)">R$20</button>
+    <button class="btn" onclick="enviarOutro(valor=30)">Outro Valor</button>
+    
+  </div>
+
+  <footer>
+    &copy; 2025 Rodrigo Rabêlo - Pagamento via Pix ou Cartão
+  </footer>
+
+  <script>
+    function pagarMercadoPago() {
+      // Abre o link da preferência em uma nova aba
+      const url = "https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=228307529-47fce169-1405-44fa-b3ef-748ad216bb73";
+      window.open(url, "_blank");
+    }
+
+    function enviarValor(valor=10) {
+      const url = "https://mpago.la/1Y3NjpG";
+      window.open(url, "_blank");
+    }
+
+    function enviarValor(valor=20) {
+      const url = "https://mpago.la/1PNHZEj";
+      window.open(url, "_blank");
+    }
+
+    function enviarOutro(valor=30) {
+      const url = "https://link.mercadopago.com.br/rodrigorabelo";
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>

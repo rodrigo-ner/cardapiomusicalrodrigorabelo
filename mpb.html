@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repertório MPB - Rodrigo Rabêlo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .music-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .music-item {
+      background: #1e1e1e;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .music-item button {
+      background: #00c3ff;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Repertório MPB - Rodrigo Rabêlo</h1>
+    <p>Escolha sua música preferida de MPB e peça ao vivo!</p>
+  </header>
+
+  <div class="container">
+    <ul class="music-list">
+      <li class="music-item">
+        <span>Djavan - Oceano</span>
+        <button onclick="pedirMusica('Oceano')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Caetano Veloso - Sozinho</span>
+        <button onclick="pedirMusica('Sozinho')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Nando Reis - All Star</span>
+        <button onclick="pedirMusica('All Star')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Elis Regina - Como Nossos Pais</span>
+        <button onclick="pedirMusica('Como Nossos Pais')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Gilberto Gil - Vamos Fugir</span>
+        <button onclick="pedirMusica('Vamos Fugir')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Tiago Iorc - Amei te ver</span>
+        <button onclick="pedirMusica('Amei te ver')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Vitor Kley - O Sol</span>
+        <button onclick="pedirMusica('O Sol VKley')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Djavan - Eu te Devoro</span>
+        <button onclick="pedirMusica('Eu te devoro')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Secos e Molhados - Sangue Latino</span>
+        <button onclick="pedirMusica('Sangue Latino')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>Tim Maia - Ela Partiu</span>
+        <button onclick="pedirMusica('Ela Partiu')">Pedir Música</button>
+      </li>
+                  <li class="music-item">
+        <span>Tim Maia - Você</span>
+        <button onclick="pedirMusica('Você')">Pedir Música</button>
+      </li>
+                  <li class="music-item">
+        <span>Tim Maia - Gostava tanto de você</span>
+        <button onclick="pedirMusica('Gostava Tanto de Você')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+              <span>Rita Lee - Mania de você</span>
+        <button onclick="pedirMusica('Mania de você')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+      <span>Falamansa - Oh Chuva!</span>
+        <button onclick="pedirMusica('Oh Chuva!')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+      <span>Zeca Baleiro - Telegrama</span>
+        <button onclick="pedirMusica('Telegrama')">Pedir Música</button>
+      </li>
+      <!-- Adicione mais músicas MPB aqui -->
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Rodrigo Rabêlo - Repertório MPB
+  </footer>
+
+  <script>
+    function pedirMusica(nome) {
+      // Você pode passar o nome da música como parâmetro para a próxima página via URL
+      const url = 'pedir.html?musica=' + encodeURIComponent(nome);
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>

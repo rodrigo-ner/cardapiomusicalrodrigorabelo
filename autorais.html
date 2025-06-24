@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repertório NTN & Rodrigo Rabêlo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .music-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .music-item {
+      background: #1e1e1e;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .music-item button {
+      background: #00c3ff;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Repertório NTN & Rodrigo Rabêlo</h1>
+    <p>Escolha sua música preferida de Rodrigo Rabêlo e peça ao vivo!</p>
+  </header>
+
+  <div class="container">
+    <ul class="music-list">
+      <li class="music-item">
+        <span>Rodrigo Rabêlo - Sérgio</span>
+        <button onclick="pedirMusica('Sérgio')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>NTN - Réquiem</span>
+        <button onclick="pedirMusica('Réquiem')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>NTN - Devagar</span>
+        <button onclick="pedirMusica('Devagar')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>NTN - Pressa</span>
+        <button onclick="pedirMusica('Pressa')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>NTN - Puxe o Gatilho</span>
+        <button onclick="pedirMusica('Puxe o Gatilho')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>NTN - Talvez Assim</span>
+        <button onclick="pedirMusica('Talvez Assim')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>NTN - Crer</span>
+        <button onclick="pedirMusica('Crer')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>NTN - Era Pra Gente Ser Feliz</span>
+        <button onclick="pedirMusica('Era Pra Gente Ser Feliz')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>NTN - Você não sai da minha cabeça</span>
+        <button onclick="pedirMusica('Você Não Sai da Minha Cabeça')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>NTN - Última Canção</span>
+        <button onclick="pedirMusica('Última canção')">Pedir Música</button>
+      </li>
+      <!-- Adicione mais músicas MPB aqui -->
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Rodrigo Rabêlo - Repertório NTN & Rodrigo Rabêlo
+  </footer>
+
+  <script>
+    function pedirMusica(nome) {
+      // Você pode passar o nome da música como parâmetro para a próxima página via URL
+      const url = 'pedir.html?musica=' + encodeURIComponent(nome);
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>

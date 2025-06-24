@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repertório Internacional - Rodrigo Rabêlo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .music-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .music-item {
+      background: #1e1e1e;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .music-item button {
+      background: #00c3ff;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Repertório Internacional - Rodrigo Rabêlo</h1>
+    <p>Escolha sua música Internacional preferida e peça ao vivo!</p>
+  </header>
+
+  <div class="container">
+    <ul class="music-list">
+      <li class="music-item">
+        <span>Radiohead - Creep</span>
+        <button onclick="pedirMusica('Creep')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Nirvana - Heart Shapped Box</span>
+        <button onclick="pedirMusica('Heart Shapped Box')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Pearl Jam - Black</span>
+        <button onclick="pedirMusica('Black')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>The Beatles - Oh Darling!</span>
+        <button onclick="pedirMusica('Como Nossos PaisOh Darling!')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>The Beatles - Down Let Me Down</span>
+        <button onclick="pedirMusica('Down Let Me Down')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>George Michael - Careless Whisper</span>
+        <button onclick="pedirMusica('Careless Whisper')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Linkin Park - In the End</span>
+        <button onclick="pedirMusica('In the end')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>John Lennon - Stand By Me</span>
+        <button onclick="pedirMusica('Stand Bt Me')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Pink Floyd - Wish You Were Here</span>
+        <button onclick="pedirMusica('Wish You Were Here')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Guns n' Roses - Knockin' On Heaven's Door</span>
+        <button onclick="pedirMusica('Knockin On Heavens Door')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>Måneskin - Beggin</span>
+        <button onclick="pedirMusica('Beggin')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Audioslave - Like a Stone</span>
+        <button onclick="pedirMusica('Like a Stone')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Guns n' Roses - Sweet Child O' Mine</span>
+        <button onclick="pedirMusica('Sweet Child O Mine')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Lana Del Rey - Summertime Sadness</span>
+        <button onclick="pedirMusica('Como Nossos PaisSummertime Sadness')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>The Cranberries - Zombie</span>
+        <button onclick="pedirMusica('AZombie')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>Creed - With Arms Wide Open</span>
+        <button onclick="pedirMusica('With Arms Wide Open')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Oasis - Wonderwall</span>
+        <button onclick="pedirMusica('Wonderwall')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Bryan Adams - Heaven</span>
+        <button onclick="pedirMusica('Heaven')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Paramore - Decode</span>
+        <button onclick="pedirMusica('Decode')">Pedir Música</button>
+      </li>
+      <li class="music-item">
+        <span>Michael Jackson - Billie Jean</span>
+        <button onclick="pedirMusica('Billie Jeano')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>Bon Jovi - Bed of Roses</span>
+        <button onclick="pedirMusica('Bed of Roses')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>Amy Whinehouse - Back to Black</span>
+        <button onclick="pedirMusica('Back to Black')">Pedir Música</button>
+      </li>
+            <li class="music-item">
+        <span>Foo Fighters - Everlong</span>
+        <button onclick="pedirMusica('Everlong')">Pedir Música</button>
+      </li>
+      <!-- Adicione mais músicas MPB aqui -->
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Rodrigo Rabêlo - Repertório Internacional
+  </footer>
+
+  <script>
+    function pedirMusica(nome) {
+      // Você pode passar o nome da música como parâmetro para a próxima página via URL
+      const url = 'pedir.html?musica=' + encodeURIComponent(nome);
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>
